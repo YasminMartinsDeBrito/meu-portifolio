@@ -3,7 +3,7 @@ import "../styles.css"
 export const Header  = () => {
     return(
         <>
-         <header className="header">
+         <header id="header">
             <nav>
                 <ul className="list-ul">
                     <li><a href="#about">About</a></li>
