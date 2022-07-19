@@ -1,18 +1,52 @@
-import "../styles.css"
+// import "../styles.css"
+
+import { Container, ListItem, UnorderedList } from "@chakra-ui/react"
 
 export const Header  = () => {
     return(
         <>
-         <header id="header">
-            <nav>
-                <ul className="list-ul">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skill</a></li>
-                    <li><a href="#projects">Projects</a></li>
+         <Container
+         m='0'
+         w='100vw'
+         h='80px'
+         bg='
+         #369046'
+         >
+                <UnorderedList
+                display='flex'
+                justifyContent='space-around'
+                listStyleType='none'
+                pt='25px'
+                >
+                    <ListItem
+                    border='1px solid #000'
+                    p='5px 10px'
+                    borderRadius='6px'
+                    cursor='pointer'
+                    bg='#8ae461'
+                    >
+                        <a href="#about">About</a>
+                    </ListItem>
+                    <ListItem 
+                    border='1px solid #000'
+                    p='5px 10px'
+                    borderRadius='6px'
+                    cursor='pointer'
+                    bg='#8ae461'
+                    >
+                        <a href="#skills">Skill</a>
+                    </ListItem>
+                    <ListItem border='1px solid #000'
+                    p='5px 10px'
+                    borderRadius='6px'
+                    cursor='pointer'
+                    bg='#8ae461'
+                    >
+                        <a href="#projects">Projects</a>
+                    </ListItem>
   
-                </ul>
-            </nav>
-        </header>
+                </UnorderedList>
+        </Container>
         </>
     )
 }

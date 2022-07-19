@@ -1,11 +1,10 @@
-import Routes from "./routes";
-import "./app.css"
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <main >
-     <Routes/>
-    </main>
+    <>
+     <Home/>
+    </>
   );
 }
 

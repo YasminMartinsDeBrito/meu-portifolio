@@ -3,6 +3,7 @@ import { About } from "../../components/About"
 import { Projects } from "../../components/Projects"
 import { Skill } from "../../components/Skill"
 import { Footer } from "../../components/Footer"
+import { Container } from "@chakra-ui/react"
 
 
 const Home = () => {
@@ -11,11 +12,12 @@ const Home = () => {
         <>
        <Header/>
         <main>
-            <About/>
-            <hr/>
-            <Skill/>
-            <hr/>
-            <Projects/>
+            <Container m='20px'>
+                <About/>
+                <Skill/>
+                <hr/>
+                <Projects/>
+            </Container>
         </main>
         <Footer/>
         </>
