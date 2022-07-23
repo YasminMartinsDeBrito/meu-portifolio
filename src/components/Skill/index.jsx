@@ -1,4 +1,11 @@
-import { Box, Image, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Image,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 
 export const Skill = () => {
   const skills = [
@@ -60,15 +67,44 @@ export const Skill = () => {
   ];
 
   return (
-    <Box bg='#2494'w='100vh' h='50vh'>
-      <UnorderedList display="flex" justifyContent="space-between" flexWrap='wrap' m='20px'>
+    <Container bg="#e5a0a0">
+      <UnorderedList
+        display="flex"
+        overflowX="auto"
+        scrollBehavior="smooth"
+        h="150px"
+      >
         {skills.map((item) => (
-          <ListItem w="100px" h="100px" m='10px'key={item.id} >
-            <strong>{item.name}</strong>
-            <Image w="100px" h="100px" src={item.img} alt={item.name} />
+          <ListItem
+            listStyleType="none"
+            bg="#ddd"
+            p="10px"
+            w="120px"
+            h="120px"
+            m="10px"
+            key={item.id}
+          >
+            <Box>
+              <Image
+                bg="#d806d833"
+                w="100%"
+                h="100%"
+                objectFit="cover"
+                src={item.img}
+                alt={item.name}
+              />
+            </Box>
+            <Box
+              h="140px"
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between"
+            >
+              <Text display='block' textAlign='center' p='5px'>{item.name}</Text>
+            </Box>
           </ListItem>
         ))}
       </UnorderedList>
-    </Box>
+    </Container>
   );
 };

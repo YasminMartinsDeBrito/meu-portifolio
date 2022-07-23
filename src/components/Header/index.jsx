@@ -1,8 +1,12 @@
 // import "../styles.css"
 
-import { Container, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Container, Link, ListItem, UnorderedList } from "@chakra-ui/react"
 
 export const Header  = () => {
+
+    const headerList = [
+        'About', 'Skill', 'Projects'
+    ]
     return(
         <>
          <Container
@@ -18,33 +22,15 @@ export const Header  = () => {
                 listStyleType='none'
                 pt='25px'
                 >
-                    <ListItem
-                    border='1px solid #000'
+                    {headerList.map((item, index) => (
+                    <ListItem key={index} border='1px solid #000'
                     p='5px 10px'
                     borderRadius='6px'
                     cursor='pointer'
-                    bg='#8ae461'
-                    >
-                        <a href="#about">About</a>
-                    </ListItem>
-                    <ListItem 
-                    border='1px solid #000'
-                    p='5px 10px'
-                    borderRadius='6px'
-                    cursor='pointer'
-                    bg='#8ae461'
-                    >
-                        <a href="#skills">Skill</a>
-                    </ListItem>
-                    <ListItem border='1px solid #000'
-                    p='5px 10px'
-                    borderRadius='6px'
-                    cursor='pointer'
-                    bg='#8ae461'
-                    >
-                        <a href="#projects">Projects</a>
-                    </ListItem>
-  
+                    bg='#8ae461'>
+                       <Link href={`#${item}`}>{item}</Link>
+                    </ListItem>))}
+                    
                 </UnorderedList>
         </Container>
         </>
